@@ -1,0 +1,303 @@
+@font-face{
+    font-family: "exo-black";
+    src: url('Font/Exo-Regular.otf'),
+         url('Font/Exo-Thin.otf'),
+         url('Font/Exo-Medium.otf'),
+         url('Font/Exo-Light.otf'),
+         url('Font/Exo-ExtraLight.otf'),
+         url('Font/Exo-ExtraBold.otf'),
+         url('Font/Exo-DemiBold.otf'),
+         url('Font/Exo-Bold.otf');
+         
+}
+/* Styling for all*/
+
+*{
+    box-sizing: border-box;
+}
+body{
+    background:#FCEDDA;
+    font-family: "exo-black", sans-serif;
+    font-weight: normal;
+    color: #FCEDDA;
+    margin: 0;
+    letter-spacing: 2px;
+}
+h1{
+    font-weight: 800;
+    font-size: 1rem; /*16/16 = 1rem*/
+    
+}
+h2{
+    font-size: 1.25rem; /*20/16 = 1.25rem*/
+}
+h3{
+    font-size: 0.75rem; /*12/16 = 0.75rem*/
+}
+p{
+    font-size: 0.688rem; /*11/16 = 0.688rem */
+    text-align: justify-all;
+}
+.hero{
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+}
+
+.hero-div, .hero-overlay {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.hero-div{
+    width: 100%;
+    background-image: linear-gradient(0deg, rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(Images/badshahi-mosque.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.hero-overlay{
+    width: 90%;
+    text-shadow: 0 2px 10px rgba(0,0,0);
+    text-align: center;
+    flex-direction: column;
+}
+.overlay-text{
+    width: 80%;
+}
+
+/* Menu Topography and styling*/
+
+.menu-container,.menu-container-overlay{
+    
+    width: 100%;  
+    display: flex;
+    gap: 1em;
+    padding: 2em 1em;
+    align-items: center;
+    background: transparent;
+    flex-direction: column;
+    height: 80vh;
+    background-color: #FCEDDA;
+    
+}
+.menu-container-overlay{
+    top: 30vh;
+    background:  none;
+    text-shadow: 0 2px 10px #000000;
+}
+.menu-item,.menu-item-overlay{
+    font-size: 1.25rem;
+    width: 100%;
+    height: 32.5%;
+   
+}
+.menu-item-overlay{
+    text-align: center;
+    background: rgba(0,0,0,0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.menu-img{
+    width: 100%;
+    height: 100%;
+    border-radius: 2px;
+    object-fit: cover;
+    object-position: 50% 50%;
+}
+
+/* About guide topography and styling*/
+
+.about-me{
+    width: 100%;
+    justify-content: center;
+}
+.about-container, .about-inner-container, .my-info-div, footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.about-container{
+    width: 97%;
+    background-image: url(Images/info-background.jpg);
+    background-size:cover;
+    height: 30vh;
+}
+.about-inner-container{
+    width: 87%;
+    height: 80%;
+    background-color:  #FCEDDA;
+    color: rgba(0,0,0,0.8);
+}
+.my-info-div{
+    width: 65%;
+    padding: 0 2em;
+    
+}
+.my-img-div{
+    width: 35%;
+    height: 100%;
+}
+.my-img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    box-shadow:0 0 20px #FCEDDA;
+}
+
+/*Footer*/
+
+footer{
+    width: 100%;
+    height:10vh;
+    background-color: rgba(0,0,0,0.8);
+    margin-top: 2em;
+}
+.copyright{
+    font-size: 0.2em;
+    font-weight: thin;
+    letter-spacing: 0.5px;
+    font-family: sans-serif;
+}
+
+/* Utility Classes*/
+
+.position-absolute{
+    position: absolute;
+}
+.position-relative{
+    position: relative;
+}
+
+/*Media Queries*/
+
+/* For Samsung Fold*/
+@media(max-width:280px){
+    p{
+        font-size: 8px;
+    }
+}
+
+/*For Mobile Phones*/
+
+@media(min-width:760px){
+    h2{
+     font-size: 2.5rem;   
+    }
+    p{
+        font-size: 1.5rem
+    }
+}
+
+/*For Ipad/Tablets and desktop devices.*/
+
+@media(min-width:800px){
+    
+    /*For all*/
+    
+    h1{
+        font-weight: 800;
+        font-size: 1.5rem;
+    }
+    h2{
+        font-size: 1em;
+    }
+    
+    h3{
+        font-size: 1.5em;
+    }
+    p{
+        font-size: 1em;
+    }
+
+    /* Hero */
+    
+    .hero{
+        height: 70vh;
+    }
+    
+    /*Menu*/
+    
+    .menu-container,.menu-container-overlay{
+        gap: 1em;
+        align-items: center;
+        flex-direction: row;
+        justify-content: space-evenly;
+        height: 60vh;     
+    }
+    .menu-container-overlay{
+        top: 70vh;
+    }
+    .menu-item,.menu-item-overlay{
+        height: 100%;
+        width: 25%;
+        border-radius: 50%;
+        box-shadow: 0 0 20px rgba(0,0,0,0.8);
+    }
+    .menu-item-overlay{
+        opacity: 0;
+    }
+    .menu-item-overlay:hover{
+        opacity: 1;
+    }
+    .menu-img{
+        border-radius: 50%;
+    }
+    
+    /*About Guide*/
+    
+    .about-me{
+        width: 100%;
+        display: flex;
+    }
+    .about-container{
+        width: 97%;
+        height: 80vh;
+    }
+    .about-inner-container{
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    .my-img-div{
+        width: 25%;
+        height: 60%;
+        border-radius: 50%;
+    }
+    .my-img{
+        height: 100%;
+        width: 100%;
+        border-radius: 50%;
+        box-shadow: 0 0 10px rgba(0,0,0,0.8);
+    }
+    .my-info-div{
+        width: 100%;
+        flex-direction: column;
+        padding: 0 2em;
+        text-align: center;
+        color: rgba(0,0,0,0.8);
+    }
+    
+    /*Footer*/
+    
+    footer{
+        height: 15vh;
+    }
+    .copyright{
+        font-size: 0.8rem;
+    }
+}
+
+/* Utility Classes for testing*/
+/*
+.border-red{
+    border: 5px solid red;
+}
+.border-green{
+    border: 5px solid green;
+}
+.border-blue{
+    border: 5px solid blue;
+}*/
